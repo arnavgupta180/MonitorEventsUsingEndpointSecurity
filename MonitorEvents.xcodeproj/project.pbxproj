@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		479F04552E069FB600D8FE1A /* libEndpointSecurity.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 479F04542E069FB600D8FE1A /* libEndpointSecurity.tbd */; };
+		479F045D2E069FB600D8FE1A /* com.arnav.MonitorEvents.MonitorFileEventsExtension.systemextension in Embed System Extensions */ = {isa = PBXBuildFile; fileRef = 479F04522E069FB600D8FE1A /* com.arnav.MonitorEvents.MonitorFileEventsExtension.systemextension */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		479F04322E069F4800D8FE1A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -21,13 +26,54 @@
 			remoteGlobalIDString = 479F041F2E069F4400D8FE1A;
 			remoteInfo = MonitorEvents;
 		};
+		479F045B2E069FB600D8FE1A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 479F04182E069F4400D8FE1A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 479F04512E069FB600D8FE1A;
+			remoteInfo = MonitorFileEventsExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		479F04622E069FB600D8FE1A /* Embed System Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(SYSTEM_EXTENSIONS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+				479F045D2E069FB600D8FE1A /* com.arnav.MonitorEvents.MonitorFileEventsExtension.systemextension in Embed System Extensions */,
+			);
+			name = "Embed System Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		479F04202E069F4400D8FE1A /* MonitorEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonitorEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		479F04312E069F4800D8FE1A /* MonitorEventsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MonitorEventsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		479F043B2E069F4800D8FE1A /* MonitorEventsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MonitorEventsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		479F04522E069FB600D8FE1A /* com.arnav.MonitorEvents.MonitorFileEventsExtension.systemextension */ = {isa = PBXFileReference; explicitFileType = "wrapper.system-extension"; includeInIndex = 0; path = com.arnav.MonitorEvents.MonitorFileEventsExtension.systemextension; sourceTree = BUILT_PRODUCTS_DIR; };
+		479F04542E069FB600D8FE1A /* libEndpointSecurity.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libEndpointSecurity.tbd; path = usr/lib/libEndpointSecurity.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		47815B892E0815F800133C36 /* Exceptions for "MonitorFileEventsExtension" folder in "MonitorEvents" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				FileMonitorXPCProtocol.swift,
+			);
+			target = 479F041F2E069F4400D8FE1A /* MonitorEvents */;
+		};
+		479F045E2E069FB600D8FE1A /* Exceptions for "MonitorFileEventsExtension" folder in "MonitorFileEventsExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				FileMonitorXPCProtocol.swift,
+				Info.plist,
+			);
+			target = 479F04512E069FB600D8FE1A /* MonitorFileEventsExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		479F04222E069F4400D8FE1A /* MonitorEvents */ = {
@@ -43,6 +89,15 @@
 		479F043E2E069F4800D8FE1A /* MonitorEventsUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = MonitorEventsUITests;
+			sourceTree = "<group>";
+		};
+		479F04562E069FB600D8FE1A /* MonitorFileEventsExtension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				47815B892E0815F800133C36 /* Exceptions for "MonitorFileEventsExtension" folder in "MonitorEvents" target */,
+				479F045E2E069FB600D8FE1A /* Exceptions for "MonitorFileEventsExtension" folder in "MonitorFileEventsExtension" target */,
+			);
+			path = MonitorFileEventsExtension;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -69,6 +124,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		479F044F2E069FB600D8FE1A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				479F04552E069FB600D8FE1A /* libEndpointSecurity.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -78,6 +141,8 @@
 				479F04222E069F4400D8FE1A /* MonitorEvents */,
 				479F04342E069F4800D8FE1A /* MonitorEventsTests */,
 				479F043E2E069F4800D8FE1A /* MonitorEventsUITests */,
+				479F04562E069FB600D8FE1A /* MonitorFileEventsExtension */,
+				479F04532E069FB600D8FE1A /* Frameworks */,
 				479F04212E069F4400D8FE1A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,8 +153,17 @@
 				479F04202E069F4400D8FE1A /* MonitorEvents.app */,
 				479F04312E069F4800D8FE1A /* MonitorEventsTests.xctest */,
 				479F043B2E069F4800D8FE1A /* MonitorEventsUITests.xctest */,
+				479F04522E069FB600D8FE1A /* com.arnav.MonitorEvents.MonitorFileEventsExtension.systemextension */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		479F04532E069FB600D8FE1A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				479F04542E069FB600D8FE1A /* libEndpointSecurity.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,10 +176,12 @@
 				479F041C2E069F4400D8FE1A /* Sources */,
 				479F041D2E069F4400D8FE1A /* Frameworks */,
 				479F041E2E069F4400D8FE1A /* Resources */,
+				479F04622E069FB600D8FE1A /* Embed System Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				479F045C2E069FB600D8FE1A /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				479F04222E069F4400D8FE1A /* MonitorEvents */,
@@ -163,6 +239,28 @@
 			productReference = 479F043B2E069F4800D8FE1A /* MonitorEventsUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		479F04512E069FB600D8FE1A /* MonitorFileEventsExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 479F045F2E069FB600D8FE1A /* Build configuration list for PBXNativeTarget "MonitorFileEventsExtension" */;
+			buildPhases = (
+				479F044E2E069FB600D8FE1A /* Sources */,
+				479F044F2E069FB600D8FE1A /* Frameworks */,
+				479F04502E069FB600D8FE1A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				479F04562E069FB600D8FE1A /* MonitorFileEventsExtension */,
+			);
+			name = MonitorFileEventsExtension;
+			packageProductDependencies = (
+			);
+			productName = MonitorFileEventsExtension;
+			productReference = 479F04522E069FB600D8FE1A /* com.arnav.MonitorEvents.MonitorFileEventsExtension.systemextension */;
+			productType = "com.apple.product-type.system-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -184,6 +282,9 @@
 						CreatedOnToolsVersion = 16.2;
 						TestTargetID = 479F041F2E069F4400D8FE1A;
 					};
+					479F04512E069FB600D8FE1A = {
+						CreatedOnToolsVersion = 16.2;
+					};
 				};
 			};
 			buildConfigurationList = 479F041B2E069F4400D8FE1A /* Build configuration list for PBXProject "MonitorEvents" */;
@@ -203,6 +304,7 @@
 				479F041F2E069F4400D8FE1A /* MonitorEvents */,
 				479F04302E069F4800D8FE1A /* MonitorEventsTests */,
 				479F043A2E069F4800D8FE1A /* MonitorEventsUITests */,
+				479F04512E069FB600D8FE1A /* MonitorFileEventsExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -223,6 +325,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		479F04392E069F4800D8FE1A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		479F04502E069FB600D8FE1A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -253,6 +362,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		479F044E2E069FB600D8FE1A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -265,6 +381,11 @@
 			isa = PBXTargetDependency;
 			target = 479F041F2E069F4400D8FE1A /* MonitorEvents */;
 			targetProxy = 479F043C2E069F4800D8FE1A /* PBXContainerItemProxy */;
+		};
+		479F045C2E069FB600D8FE1A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 479F04512E069FB600D8FE1A /* MonitorFileEventsExtension */;
+			targetProxy = 479F045B2E069FB600D8FE1A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -393,6 +514,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MonitorEvents/MonitorEvents.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -409,6 +532,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.arnav.MonitorEvents;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -420,6 +544,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MonitorEvents/MonitorEvents.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -436,6 +562,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.arnav.MonitorEvents;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -509,6 +636,68 @@
 			};
 			name = Release;
 		};
+		479F04602E069FB600D8FE1A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = MonitorFileEventsExtension/MonitorFileEventsExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = 52JKWH3ZS9;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MonitorFileEventsExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MonitorFileEventsExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.arnav.MonitorEvents.MonitorFileEventsExtension;
+				PRODUCT_NAME = "$(inherited)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "Arnav Gupta system extension";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		479F04612E069FB600D8FE1A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = MonitorFileEventsExtension/MonitorFileEventsExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = 52JKWH3ZS9;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MonitorFileEventsExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MonitorFileEventsExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.arnav.MonitorEvents.MonitorFileEventsExtension;
+				PRODUCT_NAME = "$(inherited)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "Arnav Gupta system extension";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -544,6 +733,15 @@
 			buildConfigurations = (
 				479F044C2E069F4800D8FE1A /* Debug */,
 				479F044D2E069F4800D8FE1A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		479F045F2E069FB600D8FE1A /* Build configuration list for PBXNativeTarget "MonitorFileEventsExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				479F04602E069FB600D8FE1A /* Debug */,
+				479F04612E069FB600D8FE1A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
